@@ -24,7 +24,8 @@ node_modules/
 secret.py
 inscrawler/bin/*
 !inscrawler/bin/.keep
-
+g
 .idea/
 venv/
 output/
+output.json

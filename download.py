@@ -36,5 +36,12 @@ if __name__ == '__main__':
 
         data = json.load(data_file)
         for i in range(0, len(data)):
-            url = data[i]['img_urls'][0]
-            download(url, "output/" + str('%06d' % (last_file_name + i)) + f"_{data[i]['likes']}.jpg")
+            urls = data[i]['img_urls']
+            for url in urls:
+                if not url:
+                    continue
+                last_file_name = last_file_name + 1
+                try:
+                    download(url, "output/" + str('%06d' % (last_file_name + i)) + f"_{data[i]['likes']}.jpg")
+                except Exception as e:
+                    print(repr(e))
