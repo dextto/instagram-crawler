@@ -42,6 +42,6 @@ if __name__ == '__main__':
                     continue
                 last_file_name = last_file_name + 1
                 try:
-                    download(url, "output/" + str('%06d' % (last_file_name + i)) + f"_{data[i]['likes']}.jpg")
+                    download(url, "output/" + str('%06d' % last_file_name) + f"_{data[i]['likes']}.jpg")
                 except Exception as e:
                     print(repr(e))
