@@ -236,7 +236,7 @@ class InsCrawler(Logging):
                 )
                 traceback.print_exc()
 
-            self.log(json.dumps(dict_post, ensure_ascii=False))
+            self.log(json.dumps(dict_post, ensure_ascii=True))
             dict_posts[browser.current_url] = dict_post
 
             pbar.update(1)
